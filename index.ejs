@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Green Age - Team A</title>
+
+<link href="/tooplate_style.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/nivo-slider.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="/js/jquery.nivo.slider.js"></script>
+
+<script>
+function clearText(field){
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+
+$(window).on('load', function() {
+    $('#slider').nivoSlider({
+        effect:'random',
+        slices:10,
+        animSpeed:500,
+        pauseTime:2200
+    });
+});
+</script>
+
+</head>
+
+<body class="homepage">
+
+<div id="tooplate_wrapper">
+
+    <!-- HEADER (A làm) -->
+    <div id="tooplate_header">
+        <div id="site_title">
+            <h1><a href="/">Green Age - Team A</a></h1>
+        </div>
+    </div>
+
+    <!-- MENU (TẠO CONFLICT 1) -->
+    <div id="tooplate_menu">
+        <ul>
+            <li><a href="/" class="current">Home</a></li>
+            <li><a href="#">Services A</a></li> <!-- A sửa -->
+            <li><a href="#">News</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="last"><a href="#">Contact</a></li>
+        </ul>
+
+        <div id="search_box">
+            <form>
+                <input type="text" value="Search"
+                    onfocus="clearText(this)" onblur="clearText(this)" />
+            </form>
+        </div>
+    </div>
+
+    <!-- SLIDER -->
+    <div id="tooplate_middle">
+        <div id="slider">
+            <img src="/images/slideshow/01.jpg" />
+            <img src="/images/slideshow/02.jpg" />
+            <img src="/images/slideshow/03.jpg" />
+            <img src="/images/slideshow/04.jpg" />
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div id="tooplate_main">
+
+        <div class="col_w960">
+            <h2>Welcome to Green Age</h2>
+
+            <!-- CONTENT A -->
+            <div class="col_w450 float_l">
+                <div class="wwd_box">
+                    <img src="/images/icon1.png" />
+                    <h3>Feature A</h3>
+                    <p>Nội dung do máy A phát triển</p>
+                </div>
+
+                <div class="wwd_box">
+                    <img src="/images/icon2.png" />
+                    <h3>Service A</h3>
+                    <p>Phần này máy A chỉnh sửa</p>
+                </div>
+            </div>
+
+            <!-- để B làm -->
+            <div class="col_w450 float_r">
+                <div class="wwd_box">
+                    <img src="/images/icon3.png" />
+                    <h3>Online Marketing</h3>
+                    <p>Chỗ này để máy B sửa</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER (TẠO CONFLICT 2) -->
+<div id="tooplate_cr_wrapper">
+    <div id="tooplate_cr">
+        Copyright © 2026 Team A
+    </div>
+</div>
+
+</body>
+</html>
